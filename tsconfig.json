@@ -1,0 +1,28 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-native",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@env": ["env.d.ts"]
+    },
+    "types": ["jest", "react", "react-native"]
+  },
+  "include": [
+    "env.d.ts",
+    "App.tsx",
+    "src/**/*",
+    "src/__tests__/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
