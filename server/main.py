@@ -5,6 +5,8 @@ import uvicorn
 import openai
 import faiss
 import numpy as np
+from dotenv import load_dotenv
+import os
 
 app = FastAPI()
 
@@ -22,7 +24,8 @@ collection = db.interactions
 dimension = 1536
 index = faiss.IndexFlatL2(dimension)
 
-openai.api_key = "<YOUR_OPENAI_API_KEY>"
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def embed(text: str):
     response = openai.Embedding.create(input=text, model="text-embedding-ada-002")

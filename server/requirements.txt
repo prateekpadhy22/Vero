@@ -3,3 +3,4 @@ uvicorn
 openai
 faiss-cpu
 pymongo
+python-dotenv

@@ -28,7 +28,11 @@ pip install -r server/requirements.txt
 python server/main.py
 ```
 
-Replace `YOUR_OPENAI_API_KEY` in `server/main.py` with your API key.
+Create a `.env` file in the `server` directory containing your OpenAI key:
+
+```bash
+OPENAI_API_KEY=your-key-here
+```
 
 ## Building the iOS App
 
